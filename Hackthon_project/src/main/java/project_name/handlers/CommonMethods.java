@@ -1,10 +1,9 @@
 package project_name.handlers;
 
 import java.time.Duration;
-import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -22,19 +21,18 @@ public class CommonMethods {
 	}
 
 	/**
-	 * clicking on a webelement
 	 * 
 	 * @param element
 	 */
 	public void clickOnWebElement(WebElement element) {
+		element.click();
+	}
+	public void mouseHover(WebElement element, WebDriver driver) {
+		//Creating object of an Actions class
+		Actions action = new Actions(driver);
 
-		try {
-			wait.until(ExpectedConditions.elementToBeClickable(element));
-			element.click();
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("Click was not not successful");
-		}
+		//Performing the mouse hover action on the target element.
+		action.moveToElement(element).perform();
 	}
 
 	/**
@@ -84,21 +82,6 @@ public class CommonMethods {
 			e.printStackTrace();
 		}
 	}
-
-	/**
-	 * 
-	 * @param driver
-	 */
-	public void quitBrowser(WebDriver driver) {
-		driver.quit();
-	}
 	
-	/**
-	 * 
-	 * @param driver
-	 */
-	public void closeCurrentBrowserWindow(WebDriver driver) {
-		driver.close();
-	}
 	
 }

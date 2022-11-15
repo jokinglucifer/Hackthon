@@ -3,7 +3,7 @@ package project_name.tests;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
-public class Hooks {
+public class NewBikesTest {
 	
 	
 	@BeforeTest (alwaysRun =  true)

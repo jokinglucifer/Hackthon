@@ -10,7 +10,7 @@ import project_name.handlers.CommonMethods;
 import project_name.pages.HomePage;
 import project_name.readers.PropertiesReader;
 
-public class SenarioNameTest {
+public class LoginTest {
 
 	PropertiesReader propertiesReader;
 	CommonMethods commonMethods;

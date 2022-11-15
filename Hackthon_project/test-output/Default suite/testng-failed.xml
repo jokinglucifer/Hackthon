@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="project_name.tests.SenarioNameTest">
+      <class name="project_name.tests.UsedCarsTest">
         <methods>
-          <include name="initialize"/>
-          <include name="TestCaseName3"/>
+          <include name="selectCityBanglore"/>
+          <include name="aftertest"/>
+          <include name="beforeMethodTest"/>
+          <include name="selectCitydelhi"/>
+          <include name="selectCityChennai"/>
         </methods>
-      </class> <!-- project_name.tests.SenarioNameTest -->
+      </class> <!-- project_name.tests.UsedCarsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
