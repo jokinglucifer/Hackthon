@@ -1,6 +1,8 @@
 package project_name.handlers;
 
 import java.time.Duration;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -27,6 +29,10 @@ public class CommonMethods {
 	public void clickOnWebElement(WebElement element) {
 		element.click();
 	}
+	
+	public void scrollDown(WebDriver driver) { 
+		((JavascriptExecutor)driver).executeScript("scroll(0,500)");
+	}
 	public void mouseHover(WebElement element, WebDriver driver) {
 		//Creating object of an Actions class
 		Actions action = new Actions(driver);
@@ -43,13 +49,9 @@ public class CommonMethods {
 	 */
 	public void sendTextToWebElement(WebElement element, String text) {
 
-		try {
 			wait.until(ExpectedConditions.visibilityOf(element));
 			element.sendKeys(text);
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("Click was not not successful");
-		}
+	
 	}
 
 	/**

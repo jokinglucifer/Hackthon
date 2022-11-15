@@ -5,11 +5,9 @@
     <classes>
       <class name="project_name.tests.UsedCarsTest">
         <methods>
-          <include name="selectCityBanglore"/>
           <include name="aftertest"/>
           <include name="beforeMethodTest"/>
-          <include name="selectCitydelhi"/>
-          <include name="selectCityChennai"/>
+          <include name="modelSeacrch"/>
         </methods>
       </class> <!-- project_name.tests.UsedCarsTest -->
     </classes>

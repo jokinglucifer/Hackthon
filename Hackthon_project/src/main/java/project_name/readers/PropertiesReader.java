@@ -71,27 +71,4 @@ PathReader pr = new PathReader();
 		String hardWait = (String) properties.get("hardWait");
 		return Integer.parseInt(hardWait);
 	}
-
-//	public static void main(String[] args) throws FileNotFoundException {
-//
-//		String currentProjectLocation = System.getProperty("user.dir");
-//		String insideProjectFileLocation = "/src/main/resources/configuration.properties";
-//
-//		String configgurationPageLocation = currentProjectLocation + insideProjectFileLocation;
-//		FileReader fr = new FileReader(configgurationPageLocation);
-//		Properties properties = new Properties();
-//		try {
-//			properties.load(fr);
-//			String bn = (String) properties.get("browsername");
-//			System.out.println(bn);
-//			String hardWait = (String) properties.get("hardWait");
-//			int h = Integer.parseInt(hardWait);
-//			System.out.println(h);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//
-//	}
-	
 }
